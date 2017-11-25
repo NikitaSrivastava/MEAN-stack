@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car Wash</title>
+</head>
+<script 
+src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" >
+</script>
+<script  src = "cont.js"> </script>  
+<body>
+<div ng-app = "myApp" ng-controller = "myControl">
+	<form>
+		CAR NAME : <input type="text" ng-model="carname">
+		CAR NUMBER : <input type = "text" ng-model ="carnumber">
+        CAR IN TIME : <input type = "TIME" ng-model ="in_time">
+        CAR OUT TIME: <input type = "TIME" ng-model ="out_time">
+    </form>
+    <table border="1">
+    <tr ng-repeat="x in cardetails">
+        <td>{{x.carname}}</td>
+        <td>{{x.carnumber}}</td>
+    </tr>
+    </table>    
+        </br>
+     	</br>
+     	<p>
+     		Your car {{carname}} having number
+     		{{carnumber}} is safe with us
+     	</p>
+
+     </div>
+</body>
+
+
+</html>

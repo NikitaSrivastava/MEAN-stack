@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car Wash</title>
+    <h1>CAR WASH</h1>
+</head>
+<script 
+src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" >
+</script>
+<script  src = "const.js"> </script>  
+<body>
+<div ng-app = "myApp" ng-controller = "myControl">
+    <table border="10" width ="300" cellpadding="10" height = "500">
+     <tr>
+         <td> <input type="text" ng-model="ca.carname"></td>
+         <td><input type = "text" ng-model ="ca.carnumber"></td>
+         <td><input type = "text" ng-model ="ca.intime"></td>
+         <td><input type = "text" ng-model ="ca.outtime"></td>
+         <td><button  ng-click = "addinfo()">Add Button</button></td>
+         <td><button ng-click = "update(ca._id)">Update</button></td>
+         <td><button ng-click = "clear">clear</button></td>
+     </tr>       
+    <tr ng-repeat="car in cardetails">
+        <td>{{car.carname}}</td>
+        <td>{{car.carnumber}}</td>
+        <td>{{car.intime}}</td>
+        <td>{{car.outtime}}</td>
+        <td><button ng-click = "remove(car._id)">Remove</button></td>
+        <td><button ng-click = "edit(car._id)">Edit</button></td>
+    </tr>
+    </table>    
+        </br>
+     	</br>
+     	<p>
+     		Your car {{carname}} having number
+     		{{carnumber}} is safe with us
+     	</p>
+
+     </div>
+</body>
+
+
+</html>
